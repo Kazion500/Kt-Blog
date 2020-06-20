@@ -3,53 +3,16 @@
 @import url('fonts.css');
 @import 'variables';
 @import 'mediaQuery';
+@import 'responsiveness';
 
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
-    letter-spacing: .08em;
-}
 img{
     max-width: 100%;
 }
-a {
-    text-decoration: none;
-    font-family: $roboto-regular;
-    color: $white;
-}
-li{
-    list-style-type: none;
-}
-h4{
-    font-family: $roboto-bold;
-    letter-spacing: .1em;
-}
 p{
-    font-family: $open-sans;
     font-size: $xsm;
-}
-small{
-    font-family: $roboto-light;
-}
-i{
-    color: $grey;
-    cursor: pointer;
-}
-.btn-sm{
-    background-color: darken( #099, 30%);
-    border: none;
-    border-radius: .2em;
-    color: $white;
-    padding: 0 1em;
-    margin: 1em 1em 1em 0;
-    display: block;
-    letter-spacing: 1px;
-    cursor: pointer;
-    &:hover{
-        background-color: #062b28;
-    }
 }
