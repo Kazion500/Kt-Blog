@@ -1,0 +1,397 @@
+@import 'global';
+
+
+/*
+ Alert section  */ 
+.alert-bar{
+    background-color: $bg-color;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-family: $roboto-regular;
+        letter-spacing: .05em;
+        font-size: $sm;
+        span{
+            border: $border;
+            padding: .14em;
+        }
+    }
+}
+/*
+ Hero section  */ 
+.hero{
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    padding: 0 1rem;
+    color: $white;
+    h4{
+        font-size: $md;
+        text-transform: uppercase;
+        span{
+            display: block;
+        }
+    }
+    p{
+        margin-top: .8em;
+        line-height: 1.4;
+        span{
+            display: block;
+        }
+    }
+}
+@include tablet {
+    .hero{
+        padding: 0 5em;
+    }
+}
+/*
+ Navigation section  */ 
+
+.navbar{
+    height: 9vh;
+    background-color: rgba($color: #000000, $alpha: .8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    .logo{
+        font-size: $md;
+        order: 1;
+        a{
+            color: $white;
+            h4 {
+                letter-spacing: .07rem;
+                span{
+                    border:$border-2;
+                    padding: .2rem;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .navbars{
+        font-size: $md;
+        order: 0;
+    }
+    .user-icon {
+        font-size: $md;
+        order: 2;
+    }
+}
+@include tablet {
+    .navbar{
+        padding: 0 5em;
+        margin-bottom: 2em;
+    }
+}
+.collapse{
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    display: none!important;
+    display: flex;
+    flex-direction: column;
+    padding: 2em ;
+    font-size: $xsm;
+    a:hover{
+        opacity: .6;
+    }
+    .fa-window-close{
+        font-size: $md;
+        margin-bottom: 1rem;
+        opacity: .6;
+        transition: ease-in-out 300ms;
+        align-self: flex-start;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .navbar-nav{
+        order: 1;
+        li{
+            padding: .9em 0;
+            a{
+                display: block;
+            }
+        }
+    }
+    .search-form{
+        order: 0;
+        margin: .7rem 0;
+        input{
+            background-color: #444;
+            padding: .7em .5em;
+            border-radius: .2rem;
+            width: 65vw;
+            font-family: $roboto-regular;
+            letter-spacing: .1rem;
+            border: 1px solid rgba($color: #000000, $alpha: .1);
+            transition: ease-in-out 300ms;
+            &:focus{
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+    .search-btn{
+        padding: .68em 1rem;
+        background-color: transparent;
+        border: .1rem solid $grey;
+        border-radius: .2rem;
+        cursor: pointer;
+    }
+    .btn-reg{
+        position: absolute;
+        right: 2rem;
+        order: 0;
+        a{
+            padding-left: 1rem;
+        }
+    }
+}
+/*
+ Articles section  */ 
+.articles{
+    margin: 1.3em 1em 0;
+   .content-post{
+        .profile-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: $xsm;
+            letter-spacing: .02rem;
+            padding: .3rem 0;
+            border-bottom: $border-2;
+        }
+        .content{
+            .a-title{
+                margin: 1rem 0;
+            }
+            small{
+                line-height: 2.5;
+                a{
+                    color: $primary-color;
+                }
+            }
+            p{
+                line-height: 1.5rem;
+                text-align: justify;
+            }
+            .react{
+                display: flex;
+                align-items: center;
+                margin: .6em 0 0;
+                letter-spacing: 1px;
+                sup{
+                    color: $primary-color;
+                }
+            }
+        }
+   }
+}
+@include mobile {
+    .articles{
+        margin:0;
+        display: flex;
+        .content-post{
+            margin: 1.3em 1em 0;
+        }
+    }
+    
+    
+}
+@include tablet {
+    .articles{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        .content-post{
+            margin: 0;
+        }
+        .content{
+            h4{
+                font-size: $md;
+            }
+            p{
+                font-size: $sm ;
+            }
+        }
+      
+        
+    }
+}
+/*
+ Popular section  */
+.content-p{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    .post{
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+    }
+    .a-title {
+        text-transform: uppercase;
+        padding: 1rem 0 .6rem;
+        border-bottom: $border-2;
+        margin: 0 0 1rem;
+    }
+    .post-img{
+        img{
+            height: 87px;
+            width: 130px;
+        }
+    }
+    .post-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 .5rem 0;
+        .cat{
+            font-size: .8rem;
+            padding: .1rem 0;
+        }
+        .date{
+            font-size: .8rem;
+        }
+        a{
+            color: $black;
+            font-size: $sm;
+            line-height: 1.4rem;
+            padding: .3rem 0;
+        } 
+    }
+    
+}
+@include mobile {
+    .content-p{
+        .a-title {
+            font-size: $xmd;
+        }
+        .post-info{
+            .cat{
+                padding: .1rem 0;
+            }
+            a{
+                line-height: 1.5rem;
+                font-size: 1.2em;
+                padding: .3rem 0;
+            }
+        }
+        
+    }
+}
+@include tablet {
+    .content-p{
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+/*
+ Call to Action section  */ 
+.cta{
+    background-color: $black;
+    height: 28vh;
+    margin: 1rem 0 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .content{
+        border: $border-2;
+        padding: 1em 1rem;
+        border-radius: .2rem;
+    }
+    .btn-lg {
+        border: $border-1;
+        padding: .5em 1em;
+        margin-top: .5em; 
+        border-radius: .2rem;
+        display: block;
+        transition: ease-in-out 250ms;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
+@include mobile {
+    .cta{
+        margin: 1.5rem 0 0;
+        .btn-lg {
+            padding: .6em 1em;
+        }
+    }
+}
+/*
+ Footer section  */ 
+
+.footer{
+    background-color: $black;color: white;
+    padding: 1.5em 1em 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: $xsm;
+    .logo-footer{
+        font-size: $md;
+        margin: 0 0 .5em;
+        span{
+            border: $border-2;
+            padding: .2rem;
+            color: $primary-color;
+        }
+    }
+    .cpright-link{
+        color: $primary-color;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .some-text{
+        line-height: 1.6;
+        padding: .5rem 0;
+    }
+    .social-link{
+        padding: .8rem 0;
+        font-size: $sm;
+        
+        i{
+            transition: ease-in-out .2s;
+            padding: 0 .3rem;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: $border-2;
+        padding:.4rem 0;
+    }
+}
+@include mobile {
+    .footer {
+        background-color: $black;color: white;
+        .social-link{
+            font-size: $xmd;
+        }
+    }
+}
+@include tablet {
+    .footer{
+        padding: 2rem 5em 0;
+        font-size: $sm;
+    }
+}
