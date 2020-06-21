@@ -42,6 +42,19 @@ small {
   cursor: pointer;
 }
 
+input {
+  width: 77.7%;
+  padding: .5rem;
+  border-radius: .2em;
+  border: 1px solid #cccccc;
+}
+
+.search-btn {
+  padding: .7em 1.4em;
+  border-radius: .2em;
+  border: none;
+}
+
 .alert-bar {
   height: 5.5vh;
   display: flex;
@@ -88,6 +101,54 @@ nav {
   display: none;
 }
 
+aside {
+  grid-column: 2/3;
+  margin-top: 2.2em;
+}
+
+.myprofile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.myprofile h1 {
+  margin: 1.5em 0 1em;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.myprofile img {
+  margin-bottom: 1.5em;
+}
+
+.social-info {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.social-info i {
+  border: 1px solid #222;
+  padding: 1em 1.4em;
+  margin: .7em .1em;
+}
+
+.social-info i:hover {
+  border: 1px solid #0999;
+  color: #0999;
+}
+
+@media only screen and (min-width: 768px) {
+  aside {
+    grid-column: 2/3;
+    margin-top: 2.2em;
+  }
+}
+
 .container-article-section {
   width: 90%;
   padding: 0 0;
@@ -95,7 +156,7 @@ nav {
 }
 
 .articles {
-  padding: 2em 0;
+  margin: 2em 0;
 }
 
 .articles small:hover {
@@ -123,6 +184,20 @@ nav {
 .articles .profile-info small {
   padding: 0 0 1em;
   display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-article-section {
+    width: 90%;
+    padding: 0 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-column-gap: 2.2em;
+  }
+  .articles {
+    grid-column: 1/2;
+  }
 }
 
 .popular {
