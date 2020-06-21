@@ -1,0 +1,34 @@
+.footer{
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0 .4em;
+    a{
+        color: $primary-color;
+    }
+}
+.social-link{
+    a{
+        display: inline-block;
+        margin: .2em 0;
+        font-size:1.3em;
+        padding: .2em;
+        color: $white;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}
+.some-text {  
+    text-align: center;
+    padding: 1em;
+}
+.navbar-brand{
+    color: $white;
+    span{
+        border: $border-2;
+        padding: .2em;
+    }
+}

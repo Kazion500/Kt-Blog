@@ -1,0 +1,31 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: $xsm;
+    line-height: 1.6;
+    font-family: $roboto-regular;
+    letter-spacing: .1em;
+}
+h1{
+    font-family: $roboto-black;
+}
+li{
+    list-style-type: none;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+i{
+    cursor: pointer;
+}
+small{
+    color: $grey;
+    cursor: pointer;
+}

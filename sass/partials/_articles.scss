@@ -1,0 +1,31 @@
+.container-article-section{
+    @include container($w:90%, $m: auto);
+}
+.articles{
+    small:hover{
+        color: $primary-color;
+    }
+    a{
+        color: $grey;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    padding: 2em 0;
+    h1{
+        line-height: 1.3;
+        font-size: $xmd;
+        margin-bottom: .3em;
+    }
+    p{
+        margin: 1em 0 .5em;
+    }
+    .profile-info{
+    
+        small{
+            padding: 0 0 1em;
+            display: inline-block;
+        }
+    }
+
+}

@@ -1,4 +1,13 @@
 
+// container
+@mixin container($w:100%,$p:0,$m:0){
+    width: $w;
+    padding: 0 $p;
+    margin: 0 $m;
+}
+
+
+// Media Queries
 @mixin mobile {
     @media only screen and ( min-width : 500px ) {
         @content;

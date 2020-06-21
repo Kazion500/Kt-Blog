@@ -1,0 +1,30 @@
+.popular{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-column-gap:.7em ;
+    margin: 1em 0;
+}
+.a-title{
+    grid-column:1/3;
+    text-transform: uppercase;
+    font-size: $xmd;
+    margin-bottom: .5em;
+}
+.post-img{
+    grid-column: 1/2;
+}
+.post-info{
+    grid-column: 2/3;
+    display: inline-block;
+    line-height: 0;
+    h1{
+        margin: .3em 0;
+        font-size: $sm;
+        line-height: 1.2;
+    }
+    small:hover{
+        color: $primary-color;
+        cursor: pointer;
+    }
+}

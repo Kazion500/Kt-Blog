@@ -2,17 +2,14 @@
 
 @import url('fonts.css');
 @import 'variables';
-@import 'mediaQuery';
 @import 'responsiveness';
+@import 'reset';
+@import 'mixins';
+@import 'partials/alert-hero';
+@import 'partials/navbar';
+@import 'partials/articles';
+@import 'partials/popular';
+@import 'partials/cta';
+@import 'partials/footer';
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-img{
-    max-width: 100%;
-}
-p{
-    font-size: $xsm;
-}
+

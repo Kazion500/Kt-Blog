@@ -1,0 +1,29 @@
+.cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    height: 25vh;
+    color: $white;
+    a{
+        color: $white;
+        &:hover{
+            color: $black;
+            background-color: $primary-color;
+        }
+    }
+    .content{
+        border: $border-2;
+        padding: 1em;
+        border-radius: .2em;
+    }
+}
+
+.btn-lg{
+    display: block;
+    margin-top: 1em;
+    border: $border-3;
+    padding: .5em 1.2em;
+    border-radius: .2em;
+}
