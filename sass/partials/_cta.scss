@@ -6,6 +6,7 @@
     height: 160px;
     background-color: $black;
     color: $white;
+    
     a{
         color: $white;
         &:hover{
@@ -17,6 +18,7 @@
         border: $border-2;
         padding: 1em;
         border-radius: .2em;
+        cursor: pointer;
     }
 }
 
@@ -26,4 +28,18 @@
     border: $border-3;
     padding: .5em 1.2em;
     border-radius: .2em;
+}
+@include desktop{
+    .cta{
+        height: 260px;
+        p {font-size: 1.2em;}
+        .content{
+            padding: 2em;
+        }
+    }
+
+    .btn-lg{
+        font-size: 1.1em;
+        padding: .5em 2em;
+    }
 }

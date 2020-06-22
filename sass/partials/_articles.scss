@@ -41,7 +41,7 @@
 }
 @include tablet{
     .container-article-section{
-        @include container($w:90,$m: auto, $m-w:800px);
+        @include container($w:85,$m: auto, $m-w:800px);
         display: flex;
     }
     .articles{
@@ -49,12 +49,12 @@
         display: block;
     }
     .content-post{
-        margin: auto 2em;
+        margin: auto 2em auto 0;
     }
 }
 @include desktop{
     .container-article-section{
-        @include container($w:85,$m: auto, $m-w:900px);
+        @include container($m: auto, $m-w:900px);
     }
     .articles{
         i{
@@ -64,7 +64,7 @@
             font-size: $md;
         }
         p{
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
     }
 }

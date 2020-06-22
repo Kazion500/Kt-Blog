@@ -17,6 +17,10 @@ body {
   letter-spacing: .1em;
 }
 
+h1 {
+  font-size: 1.3rem;
+}
+
 h1, h3 {
   font-family: "Roboto-black";
 }
@@ -81,35 +85,80 @@ input {
 }
 
 .hero {
-  background-color: rgba(0, 0, 0, 0.9);
-  height: 230px;
+  background: url(../../assets/img/2.jpg) no-repeat;
+  background-size: cover;
+  background-position: left center;
+  height: 250px;
   color: #f3f3f3;
+  z-index: 1;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.hero-text {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 90%;
+  max-width: 800px;
+  padding: 0 0;
+  margin: 0 auto;
 }
 
-.hero h1 {
+.hero-text h1 {
   display: block;
   letter-spacing: .06em;
   text-transform: uppercase;
   line-height: 1.3;
   margin-bottom: .4em;
-  width: 90%;
-  max-width: 800px;
-  padding: 0 0;
-  margin: 0 auto;
 }
 
-.hero h1 span {
+.hero-text h1 span {
   display: block;
 }
 
-.hero p {
-  width: 90%;
-  max-width: 800px;
-  padding: 0 0;
-  margin: 0 auto;
+.hero-text p span {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-text {
+    flex-direction: row;
+    align-items: center;
+    width: 85;
+    max-width: 900px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+  .hero-text h1 {
+    flex: 2;
+    font-size: 2.2em;
+    letter-spacing: .1em;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .hero-text h1 span {
+    display: block;
+  }
+  .hero-text p {
+    margin-top: 2.3em;
+    flex: 1.8;
+    font-size: 1em;
+  }
+  .hero-text p span {
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -117,28 +166,23 @@ input {
     height: 40px;
   }
   .alert-bar p {
-    font-size: 1.3rem;
-  }
-  .hero {
-    height: 230px;
-  }
-  .hero h1 {
-    font-size: 2.5em;
-    letter-spacing: .1em;
-    width: 85%;
-    max-width: 800px;
-    padding: 0 0;
-    margin: 0 auto;
-  }
-  .hero h1 span {
-    display: block;
-  }
-  .hero p {
     font-size: 1.2em;
-    width: 85%;
-    max-width: 800px;
+  }
+  .hero-text {
+    width: 100%;
+    max-width: 900px;
     padding: 0 0;
     margin: 0 auto;
+  }
+  .hero-text h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    line-height: 1.1;
+  }
+  .hero-text p {
+    margin-top: 2.2em;
+    flex: 1;
+    font-size: 1.2em;
   }
 }
 
@@ -304,7 +348,7 @@ aside h3 {
 
 @media only screen and (min-width: 768px) {
   .container-article-section {
-    width: 90;
+    width: 85;
     max-width: 800px;
     padding: 0 0;
     margin: 0 auto;
@@ -315,13 +359,13 @@ aside h3 {
     display: block;
   }
   .content-post {
-    margin: auto 2em;
+    margin: auto 2em auto 0;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .container-article-section {
-    width: 85;
+    width: 100%;
     max-width: 900px;
     padding: 0 0;
     margin: 0 auto;
@@ -333,7 +377,7 @@ aside h3 {
     font-size: 1.7rem;
   }
   .articles p {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
@@ -390,6 +434,75 @@ aside h3 {
   }
 }
 
+#related-post {
+  width: 90%;
+  max-width: 800px;
+  padding: 0 0;
+  margin: 0 0;
+  margin: 3.5em auto;
+}
+
+#related-post h1 {
+  text-transform: uppercase;
+  border-bottom: 2px solid #0999;
+}
+
+.related-container .related-post {
+  margin: 1em 0 1.5em;
+  border: 1px solid #0999;
+}
+
+.related-container .related-post h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+.related-container .related-post .fa-comments {
+  margin: 1.3em 0 0;
+}
+
+@media only screen and (min-width: 586px) {
+  #related-post {
+    width: 90%;
+    max-width: 800px;
+    padding: 0 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .related-container {
+    display: flex;
+  }
+  .related-post {
+    margin-left: 1em !important;
+  }
+  .related-post:nth-of-type(1) {
+    margin-left: 0  !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    padding: .5em;
+  }
+  #related-post {
+    width: 90;
+    max-width: 800px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #related-post {
+    width: 90;
+    max-width: 900px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+}
+
 .cta {
   display: flex;
   flex-direction: column;
@@ -413,6 +526,7 @@ aside h3 {
   border: 2px solid #0999;
   padding: 1em;
   border-radius: .2em;
+  cursor: pointer;
 }
 
 .btn-lg {
@@ -421,6 +535,22 @@ aside h3 {
   border: 1px solid #222;
   padding: .5em 1.2em;
   border-radius: .2em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cta {
+    height: 260px;
+  }
+  .cta p {
+    font-size: 1.2em;
+  }
+  .cta .content {
+    padding: 2em;
+  }
+  .btn-lg {
+    font-size: 1.1em;
+    padding: .5em 2em;
+  }
 }
 
 .footer {
@@ -480,12 +610,18 @@ aside h3 {
 }
 
 @media only screen and (min-width: 1024px) {
+  .footer h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  .footer p {
+    font-size: 1.2em;
+  }
   .some-text {
     width: 85%;
     max-width: 800px;
     padding: 0 0;
     margin: 0 auto;
-    font-size: 1.1em;
   }
   .social-link i {
     font-size: 1.3rem;

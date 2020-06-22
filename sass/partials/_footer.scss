@@ -46,11 +46,18 @@
 }
 
 @include desktop{
+    .footer{
+        h1{
+            font-size: $lg;
+            margin: 0;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    }
     .some-text {  
         @include container($w:85%, $m: auto);
-        font-size: 1.1em;
     }
-
     .social-link{
         i{
             font-size: $xmd;
