@@ -1,7 +1,8 @@
 aside{
-    grid-column: 2/3;
-    margin-top: 2.2em;
-    .sidebar{
+    margin:0 0 2em;
+    h3{
+        text-transform: uppercase;
+        margin: 1em 0;
     }
 }
 .myprofile{
@@ -9,8 +10,9 @@ aside{
     flex-direction: column;
     align-items: center;
     margin-top: 1em;
+    text-align: justify;
     h1{
-        margin: 1.5em 0 1em;
+        margin: 0 0 1em;
         text-transform: uppercase;
         font-size: $xmd;
     }
@@ -23,21 +25,75 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    .fa-facebook-f{
+        padding:1em 1.26em ;
+    }
    i{
-        border: $border-3;
-        padding:1em 1.4em;
+        border: 1px solid lighten($black,90%);
+        padding:1em 1em;
         margin: .7em .1em;
         &:hover{
             border: $border-1;
             color: $primary-color;
-        }
+        } 
    }
+}
+.category{
+    margin: 2em 0 1em;
+}
+.search-form{
+    display: none;
+}
+@include mobile{
+    aside{
+        .myprofile{
+            width: 70%;
+            margin: 0 auto;
+        }
+        
+    }
 }
 @include tablet{
     aside{
-        grid-column: 2/3;
-        margin-top: 2.2em;
+        margin-top: 3em;
+        flex: 1;
+        div {
+            padding: 0 1em;
+            border: $border-1;
+        }
     }
-
+    .search-form{
+        display: block;
+    }
+    .myprofile{
+        text-align: justify;
+        width: 100% !important;
+        margin: 3.9em auto auto !important;
+        h1{
+            margin-top: 1.5em;
+        }
+    }
+    .category{
+        padding: 1em;
+    }
+}
+@include desktop{
+    .myprofile{
+        h1{
+            font-size: $md;
+            margin: 1em;
+        }
+        .social-info{
+            .fa-facebook-f{
+                padding:1em 1.6em ;
+            }
+           i{
+                padding:1em 1.4em;
+           }
+           
+        }
+    }
+    input{
+        width: 81.44%;
+    }
 }

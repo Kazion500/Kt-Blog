@@ -1,7 +1,8 @@
 
 // container
-@mixin container($w:100%,$p:0,$m:0){
+@mixin container($w:100%,$p:0,$m:0,$m-w:800px){
     width: $w;
+    max-width: $m-w;
     padding: 0 $p;
     margin: 0 $m;
 }
@@ -9,7 +10,7 @@
 
 // Media Queries
 @mixin mobile {
-    @media only screen and ( min-width : 500px ) {
+    @media only screen and ( min-width :586px ) {
         @content;
     }
 }

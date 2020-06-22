@@ -2,7 +2,10 @@
     @include container($w:90%, $m: auto);
 }
 .articles{
-    margin: 2em 0;
+    margin: 3em 0;
+    .content-post{
+        margin-bottom: 2em;
+    }
     small:hover{
         color: $primary-color;
     }
@@ -18,24 +21,50 @@
         margin-bottom: .3em;
     }
     p{
-        margin: 1em 0 .5em;
+        margin: 1em 0;
     }
     .profile-info{
     
         small{
-            padding: 0 0 1em;
+            padding: 0 .4em 1em;
             display: inline-block;
         }
     }
 }
+@include mobile{
+    .articles{
+        display: flex;
+    }
+    .content-post:first-child{
+        margin-right: 2em;
+    }
+}
 @include tablet{
     .container-article-section{
-        @include container($w:90%, $m: auto);
-        display: grid;
-        grid-template-columns: 1fr 250px ;
-        grid-column-gap:2.2em ;
+        @include container($w:90,$m: auto, $m-w:800px);
+        display: flex;
     }
     .articles{
-        grid-column: 1/2;
+        flex: 2;
+        display: block;
+    }
+    .content-post{
+        margin: auto 2em;
+    }
+}
+@include desktop{
+    .container-article-section{
+        @include container($w:85,$m: auto, $m-w:900px);
+    }
+    .articles{
+        i{
+            font-size: 1.2em;
+        }
+        h1{
+            font-size: $md;
+        }
+        p{
+            font-size: 1.1em;
+        }
     }
 }

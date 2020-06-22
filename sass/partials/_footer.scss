@@ -5,8 +5,16 @@
     flex-direction: column;
     align-items: center;
     padding: 1em 0 .4em;
+    
     a{
         color: $primary-color;
+    }
+    h1{
+        margin: .5em 0 .7em;
+    }
+    p{
+        padding: 1em 0 0;
+        font-size: $xsm;
     }
 }
 .social-link{
@@ -21,14 +29,39 @@
         }
     }
 }
+.copyright{
+    color: $grey;
+}
 .some-text {  
+    font-size: $sm;
     text-align: center;
-    padding: 1em;
+    @include container($w:90%, $m: auto);
 }
 .navbar-brand{
     color: $white;
     span{
         border: $border-2;
         padding: .2em;
+    }
+}
+
+@include desktop{
+    .some-text {  
+        @include container($w:85%, $m: auto);
+        font-size: 1.1em;
+    }
+
+    .social-link{
+        i{
+            font-size: $xmd;
+            padding: 0 .2em;
+        }
+    }
+    .navbar-brand{
+        color: $white;
+        span{
+            border: $border-2;
+            padding: .2em;
+        }
     }
 }

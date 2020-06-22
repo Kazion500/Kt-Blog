@@ -10,7 +10,7 @@ body{
     font-family: $roboto-regular;
     letter-spacing: .1em;
 }
-h1{
+h1,h3{
     font-family: $roboto-black;
 }
 li{
@@ -21,6 +21,7 @@ img{
 }
 a{
     text-decoration: none;
+    color: $grey;
 }
 i{
     cursor: pointer;
@@ -31,12 +32,18 @@ small{
 }
 input{
     width: 77.7%;
-    padding: .5rem;
+    padding: .6rem;
     border-radius: .2em;
-    border: 1px solid lighten($color: #000000, $amount: 80%);
+    border: 1px solid lighten($black,90%);
 }
 .search-btn{
-    padding: .7em 1.4em;
+    padding: .76em 1.4em;
     border-radius: .2em;
     border: none;
+    background-color: $black;
+    color: $white;
+    cursor: pointer;
+    &:hover{
+        opacity: .9;
+    }
 }

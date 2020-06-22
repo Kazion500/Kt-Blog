@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: min-content 1fr;
-    grid-column-gap:.7em ;
+    grid-gap:1em .8em ;
     margin: 1em 0;
 }
 .a-title{
@@ -13,18 +13,34 @@
 }
 .post-img{
     grid-column: 1/2;
+    img{
+        height: 100%;
+    }
 }
 .post-info{
     grid-column: 2/3;
     display: inline-block;
-    line-height: 0;
+    line-height: 1;
     h1{
-        margin: .3em 0;
+        margin: .5em 0 .5em;
         font-size: $sm;
         line-height: 1.2;
+        color: $black;
     }
     small:hover{
         color: $primary-color;
         cursor: pointer;
+    }
+}
+@include tablet{
+    .popular{
+       padding: 1em;
+    }
+}
+@include desktop{
+    .popular{
+        i{
+            font-size: 1.2em;
+        }
     }
 }

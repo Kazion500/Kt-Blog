@@ -17,7 +17,7 @@ body {
   letter-spacing: .1em;
 }
 
-h1 {
+h1, h3 {
   font-family: "Roboto-black";
 }
 
@@ -31,6 +31,7 @@ img {
 
 a {
   text-decoration: none;
+  color: #999;
 }
 
 i {
@@ -44,22 +45,34 @@ small {
 
 input {
   width: 77.7%;
-  padding: .5rem;
+  padding: .6rem;
   border-radius: .2em;
-  border: 1px solid #cccccc;
+  border: 1px solid #e6e6e6;
 }
 
 .search-btn {
-  padding: .7em 1.4em;
+  padding: .76em 1.4em;
   border-radius: .2em;
   border: none;
+  background-color: #000;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  opacity: .9;
 }
 
 .alert-bar {
-  height: 5.5vh;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #DFDFDF;
+}
+
+.alert-bar p {
+  font-size: 1em;
 }
 
 .alert-bar p span {
@@ -69,7 +82,7 @@ input {
 
 .hero {
   background-color: rgba(0, 0, 0, 0.9);
-  height: 40vh;
+  height: 230px;
   color: #f3f3f3;
   display: flex;
   flex-direction: column;
@@ -83,6 +96,7 @@ input {
   line-height: 1.3;
   margin-bottom: .4em;
   width: 90%;
+  max-width: 800px;
   padding: 0 0;
   margin: 0 auto;
 }
@@ -93,8 +107,39 @@ input {
 
 .hero p {
   width: 90%;
+  max-width: 800px;
   padding: 0 0;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .alert-bar {
+    height: 40px;
+  }
+  .alert-bar p {
+    font-size: 1.3rem;
+  }
+  .hero {
+    height: 230px;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+    letter-spacing: .1em;
+    width: 85%;
+    max-width: 800px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+  .hero h1 span {
+    display: block;
+  }
+  .hero p {
+    font-size: 1.2em;
+    width: 85%;
+    max-width: 800px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
 }
 
 nav {
@@ -102,8 +147,12 @@ nav {
 }
 
 aside {
-  grid-column: 2/3;
-  margin-top: 2.2em;
+  margin: 0 0 2em;
+}
+
+aside h3 {
+  text-transform: uppercase;
+  margin: 1em 0;
 }
 
 .myprofile {
@@ -111,10 +160,11 @@ aside {
   flex-direction: column;
   align-items: center;
   margin-top: 1em;
+  text-align: justify;
 }
 
 .myprofile h1 {
-  margin: 1.5em 0 1em;
+  margin: 0 0 1em;
   text-transform: uppercase;
   font-size: 1.3rem;
 }
@@ -128,12 +178,15 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+}
+
+.social-info .fa-facebook-f {
+  padding: 1em 1.26em;
 }
 
 .social-info i {
-  border: 1px solid #222;
-  padding: 1em 1.4em;
+  border: 1px solid #e6e6e6;
+  padding: 1em 1em;
   margin: .7em .1em;
 }
 
@@ -142,21 +195,75 @@ aside {
   color: #0999;
 }
 
+.category {
+  margin: 2em 0 1em;
+}
+
+.search-form {
+  display: none;
+}
+
+@media only screen and (min-width: 586px) {
+  aside .myprofile {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   aside {
-    grid-column: 2/3;
-    margin-top: 2.2em;
+    margin-top: 3em;
+    flex: 1;
+  }
+  aside div {
+    padding: 0 1em;
+    border: 1px solid #0999;
+  }
+  .search-form {
+    display: block;
+  }
+  .myprofile {
+    text-align: justify;
+    width: 100% !important;
+    margin: 3.9em auto auto !important;
+  }
+  .myprofile h1 {
+    margin-top: 1.5em;
+  }
+  .category {
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .myprofile h1 {
+    font-size: 1.7rem;
+    margin: 1em;
+  }
+  .myprofile .social-info .fa-facebook-f {
+    padding: 1em 1.6em;
+  }
+  .myprofile .social-info i {
+    padding: 1em 1.4em;
+  }
+  input {
+    width: 81.44%;
   }
 }
 
 .container-article-section {
   width: 90%;
+  max-width: 800px;
   padding: 0 0;
   margin: 0 auto;
 }
 
 .articles {
-  margin: 2em 0;
+  margin: 3em 0;
+}
+
+.articles .content-post {
+  margin-bottom: 2em;
 }
 
 .articles small:hover {
@@ -178,25 +285,55 @@ aside {
 }
 
 .articles p {
-  margin: 1em 0 .5em;
+  margin: 1em 0;
 }
 
 .articles .profile-info small {
-  padding: 0 0 1em;
+  padding: 0 .4em 1em;
   display: inline-block;
+}
+
+@media only screen and (min-width: 586px) {
+  .articles {
+    display: flex;
+  }
+  .content-post:first-child {
+    margin-right: 2em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .container-article-section {
-    width: 90%;
+    width: 90;
+    max-width: 800px;
     padding: 0 0;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    grid-column-gap: 2.2em;
+    display: flex;
   }
   .articles {
-    grid-column: 1/2;
+    flex: 2;
+    display: block;
+  }
+  .content-post {
+    margin: auto 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-article-section {
+    width: 85;
+    max-width: 900px;
+    padding: 0 0;
+    margin: 0 auto;
+  }
+  .articles i {
+    font-size: 1.2em;
+  }
+  .articles h1 {
+    font-size: 1.7rem;
+  }
+  .articles p {
+    font-size: 1.1em;
   }
 }
 
@@ -204,7 +341,7 @@ aside {
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: min-content 1fr;
-  grid-column-gap: .7em;
+  grid-gap: 1em .8em;
   margin: 1em 0;
 }
 
@@ -219,16 +356,21 @@ aside {
   grid-column: 1/2;
 }
 
+.post-img img {
+  height: 100%;
+}
+
 .post-info {
   grid-column: 2/3;
   display: inline-block;
-  line-height: 0;
+  line-height: 1;
 }
 
 .post-info h1 {
-  margin: .3em 0;
+  margin: .5em 0 .5em;
   font-size: 1em;
   line-height: 1.2;
+  color: #000;
 }
 
 .post-info small:hover {
@@ -236,13 +378,25 @@ aside {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 768px) {
+  .popular {
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .popular i {
+    font-size: 1.2em;
+  }
+}
+
 .cta {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 160px;
   background-color: #000;
-  height: 25vh;
   color: #f3f3f3;
 }
 
@@ -282,6 +436,15 @@ aside {
   color: #0999;
 }
 
+.footer h1 {
+  margin: .5em 0 .7em;
+}
+
+.footer p {
+  padding: 1em 0 0;
+  font-size: 0.9em;
+}
+
 .social-link a {
   display: inline-block;
   margin: .2em 0;
@@ -294,9 +457,17 @@ aside {
   color: #0999;
 }
 
+.copyright {
+  color: #999;
+}
+
 .some-text {
+  font-size: 1em;
   text-align: center;
-  padding: 1em;
+  width: 90%;
+  max-width: 800px;
+  padding: 0 0;
+  margin: 0 auto;
 }
 
 .navbar-brand {
@@ -306,4 +477,25 @@ aside {
 .navbar-brand span {
   border: 2px solid #0999;
   padding: .2em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .some-text {
+    width: 85%;
+    max-width: 800px;
+    padding: 0 0;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+  .social-link i {
+    font-size: 1.3rem;
+    padding: 0 .2em;
+  }
+  .navbar-brand {
+    color: #f3f3f3;
+  }
+  .navbar-brand span {
+    border: 2px solid #0999;
+    padding: .2em;
+  }
 }

@@ -6,7 +6,7 @@
     <title>KT Blog</title>
 
     <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css/main.css">
@@ -77,33 +77,50 @@
         <div class="container-article-section">
                 <!-- article-one -->
             <section class="articles">
-                <div class="content-post">
-                    <div class="content">
-                        <h1 class="a-title">5 TIPS ON HOW TO BECOME A PRO IN ANY PROGRAMMING LANGUAGE</h1>
-                        <div class="profile-info">
-                            <small><a href=""><i class="fas fa-user"></i> Kazion</a></small>
-                            <small><a href=""><i class="fas fa-calendar-alt"></i>2<sup>nd</sup> May, 2020</a></small>
-                        </div>
-                        <img src="assets/img/1.jpg" alt="">
-                        <small class="cat"><i class="fas fa-folder"></i> <a href="">PHP</a></small><small> |</small> 
-                        <small>2 min - Read</small>
-                        <p>The div element has no special meaning at all. It represents its children. 
-                            It can be used with the class, lang, and title.
-                            The div element has no special meaning at all. It represents its children. 
-                            It can be used with the class, lang, and title.
-                        </p>
-
-                        <div class="react">
-                            <small> <a href="" class="btn-sm"><i class="fas fa-comments"></i><sup>300</sup></a></small>
-                        </div>
+                <article class="content-post">
+                    <h1 class="a-title">5 TIPS ON HOW TO BECOME A PRO IN ANY PROGRAMMING LANGUAGE</h1>
+                    <div class="profile-info">
+                        <small><a href=""><i class="fas fa-user"></i> Kazion</a></small>
+                        <small><a href=""><i class="fas fa-calendar-alt"></i> 2<sup>nd</sup> May, 2020</a></small>
                     </div>
-                </div>
-            </section>
+                    <img src="assets/img/1.jpg" alt="">
+                    <small class="cat"><i class="fas fa-folder"></i> <a href="">PHP</a></small><small> |</small> 
+                    <small>2 min - Read</small>
+                    <p>The div element has no special meaning at all. It represents its children. 
+                        It can be used with the class, lang, and title.
+                        The div element has no special meaning at all. It represents its children. 
+                        It can be used with the class, lang, and title.
+                    </p>
 
+                    <div class="react">
+                        <small> <a href="" class="btn-sm"><i class="fas fa-comments"></i><sup>300</sup></a></small>
+                    </div>
+                </article>
+
+                <!-- second post -->
+                <article class="content-post">
+                    <h1 class="a-title">5 TIPS ON HOW TO BECOME A PRO IN ANY PROGRAMMING LANGUAGE</h1>
+                    <div class="profile-info">
+                        <small><a href=""><i class="fas fa-user"></i> Kazion</a></small>
+                        <small><a href=""><i class="fas fa-calendar-alt"></i> 2<sup>nd</sup> May, 2020</a></small>
+                    </div>
+                    <img src="assets/img/1.jpg" alt="">
+                    <small class="cat"><i class="fas fa-folder"></i> <a href="">PHP</a></small><small> |</small> 
+                    <small>2 min - Read</small>
+                    <p>The div element has no special meaning at all. It represents its children. 
+                        It can be used with the class, lang, and title.
+                        The div element has no special meaning at all. It represents its children. 
+                        It can be used with the class, lang, and title.
+                    </p>
+
+                    <div class="react">
+                        <small> <a href="" class="btn-sm"><i class="fas fa-comments"></i><sup>300</sup></a></small>
+                    </div>
+                </a>
+            </section>
             
                  <!-- sidebar -->
             <aside>
-                <div  class="sidebar">
                     <form class="search-form">
                         <input type="search" name="#" placeholder="Search">
                         <button class="search-btn" type="submit" name="#">
@@ -111,18 +128,24 @@
                         </button>
                     </form>
                     <div class="myprofile">
-                        <h1>Follow me</h1>
+                        <h1>About me</h1>
                             <img src="assets/img/4.jpg" alt="" width="150"  height="150" style="border-radius: 50%;">
-                        <div class="profile-text">
-                            <p>The div element has no special meaning at all. It represents its children. 
+
+                            <p  class="profile-text">The div element has no special meaning at all. It represents its children. 
                                 It can be used with the class, lang, and title attributes to mark up semantics 
-                                common to a group of consecutive elements.</p>
-                        </div>
-                        <div class="social-info">
+                                common to a group of consecutive elements.
+                            </p>
+                            
+                            <h3>Follow me</h3>
+                            <p  class="profile-text">
+                                The div element has no special meaning at all. It represents its children.
+                            </p>
+                        <section class="social-info">
                             <i class="fab fa-facebook-f"></i>
                             <i class="fab fa-twitter"></i>
                             <i class="fab fa-instagram"></i>
-                        </div>
+                        </section>
+                     
                     </div>
                         
                     <div class="category">
@@ -140,29 +163,47 @@
                             </li>
                         </ul>
                     </div>
+
                         <!-- popular article -->
-    
-                    <div class="popular">
-                        <h1 class="a-title">Popular articles</h1>
-                        <!-- <div class="post"> -->
-                            <div class="post-img">
-                                <a href="">
+                        <section>
+                            <div class="popular">
+                                <!-- first post -->
+                                <h1 class="a-title">Popular articles</h1>
+                                <a href="" class="post-img">
                                     <img src="assets/img/1.jpg" alt="">
                                 </a>
+                                <section class="post-info">
+                                    <small class="cat"><i class="fas fa-folder"></i> <a href="">Programming</a></small>
+                                    <a href="" class="header"><h1>2 Tips about growing your programming</h1></a>
+                                    <small class="date"><i class="far fa-calendar-alt"></i> 2 April 2020</small>
+                                </section>
+
+                                <!-- second post -->
+                                <a href="" class="post-img">
+                                    <img src="assets/img/1.jpg" alt="">
+                                </a>
+                                <section class="post-info">
+                                    <small class="cat"><i class="fas fa-folder"></i> <a href="">Programming</a></small>
+                                    <a href="" class="header"><h1>2 Tips about growing your programming</h1></a>
+                                    <small class="date"><i class="far fa-calendar-alt"></i> 2 April 2020</small>
+                                </section>
+
+                                  <!-- third post -->
+                                  <a href="" class="post-img">
+                                    <img src="assets/img/1.jpg" alt="">
+                                </a>
+                                <section class="post-info">
+                                    <small class="cat"><i class="fas fa-folder"></i> <a href="">Programming</a></small>
+                                    <a href="" class="header"><h1>2 Tips about growing your programming</h1></a>
+                                    <small class="date"><i class="far fa-calendar-alt"></i> 2 April 2020</small>
+                                </section>
                             </div>
-                           
-                            <div class="post-info">
-                                <small class="cat"><i class="fas fa-folder"></i> <a href="">Programming</a></small>
-                                <a href="" class="header"><h1>2 Tips about growing your programming</h1></a>
-                                <small class="date"><i class="far fa-calendar-alt"></i> 2 April 2020</small>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    
             </aside>
 
-
-            
+        
+    
         </div>
         
     </main>
