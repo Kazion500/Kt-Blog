@@ -10,12 +10,14 @@
     text-transform: uppercase;
     font-size: $xmd;
     margin-bottom: .5em;
+    border-bottom: $border-2;
 }
 .post-img{
     grid-column: 1/2;
     img{
-        height: 100%;
+        height: 95px;
     }
+    
 }
 .post-info{
     grid-column: 2/3;

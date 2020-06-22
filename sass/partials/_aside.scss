@@ -40,6 +40,21 @@ aside{
 }
 .category{
     margin: 2em 0 1em;
+    h1{
+        text-transform: uppercase;
+        font-size: $xmd;
+    }
+    li{
+        font-family: $roboto-bold;
+        padding: .5em 0;
+        border-bottom: $border-1;
+        a{
+            display: block;
+            &:hover{
+                color: rgb(21, 102, 102);
+            }
+        }
+    }
 }
 .search-form{
     display: none;
