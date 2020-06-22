@@ -2,6 +2,7 @@
     @include container($w:90%);
     margin: 3.5em auto;
     h1{
+        font-size: $xmd;
         text-transform: uppercase;
         border-bottom: $border-2;
     }
@@ -24,7 +25,7 @@
 
 @include mobile{
     #related-post{
-        @include container($w:90%, $m: auto);
+        @include container($w:80%, $m: auto);
         display: flex;
         flex-direction: column;
     }
@@ -46,8 +47,11 @@
         @include container($w:90, $m: auto,$m-w:800px);
     }
 }
-@include tablet{
+@include desktop{
     #related-post{
+        h1{
+            font-size: 1.8em;
+        }
         @include container($w:90, $m: auto, $m-w:900px);
     }
 }

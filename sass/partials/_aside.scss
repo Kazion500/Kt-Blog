@@ -39,7 +39,7 @@ aside{
    }
 }
 .category{
-    margin: 2em 0 1em;
+    margin: 1em 0 1em;
     h1{
         text-transform: uppercase;
         font-size: $xmd;
@@ -63,22 +63,17 @@ aside{
 .search-form{
     display: none;
 }
-@include mobile{
-    aside{
-        .myprofile{
-            width: 70%;
-            margin: 0 auto;
-        }
-        
-    }
-}
 @include tablet{
+ 
     aside{
         margin-top: 3em;
         flex: 1;
         div {
             padding: 0 1em;
             border: $border-1;
+        }
+        input{
+            width:77%;
         }
     }
     .search-form{
@@ -87,7 +82,7 @@ aside{
     .myprofile{
         text-align: justify;
         width: 100% !important;
-        margin: 3.9em auto auto !important;
+        margin: 3.9em auto 0 !important;
         h1{
             margin-top: 1.5em;
         }
@@ -97,10 +92,24 @@ aside{
     }
 }
 @include desktop{
+    aside{
+        margin-top: 3.4em;
+        input{
+            width: 81.44%;
+            font-size: 1em;
+            letter-spacing: .1em;
+        }
+        .search-form{
+            i{
+                font-size: 1em;
+                padding: .204em 0 .13em;
+            }
+        }
+    }
     .myprofile{
+        margin: 4.7em auto auto !important;
         h1{
-            font-size: $md;
-            margin: 1em;
+            margin-top: 1em;
         }
         .social-info{
             .fa-facebook-f{
@@ -111,8 +120,5 @@ aside{
            }
            
         }
-    }
-    input{
-        width: 81.44%;
     }
 }

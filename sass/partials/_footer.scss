@@ -44,7 +44,14 @@
         padding: .2em;
     }
 }
-
+@include mobile{
+    .some-text {  
+        font-size: $sm;
+        text-align: center;
+        @include container($w:80%, $m: auto);
+    }
+    
+}
 @include desktop{
     .footer{
         h1{

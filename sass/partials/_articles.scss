@@ -2,6 +2,11 @@
     @include container($w:90%, $m: auto);
 }
 .articles{
+    margin: 3em 0!important;
+    img{
+        width:100%;
+        height:200px;
+    }
     margin: 3em 0;
     .content-post{
         margin-bottom: 2em;
@@ -32,11 +37,13 @@
     }
 }
 @include mobile{
-    .articles{
-        display: flex;
+    .container-article-section{
+        @include container($w:80%, $m: auto);
     }
-    .content-post:first-child{
-        margin-right: 2em;
+    .articles{
+        img{
+            height:300px;
+        }
     }
 }
 @include tablet{
@@ -47,6 +54,9 @@
     .articles{
         flex: 2;
         display: block;
+        img{
+            height:280px;
+        }
     }
     .content-post{
         margin: auto 2em auto 0;
@@ -57,6 +67,9 @@
         @include container($m: auto, $m-w:900px);
     }
     .articles{
+        img{
+            height:350px;
+        }
         i{
             font-size: 1.2em;
         }
